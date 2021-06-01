@@ -1,0 +1,16 @@
+<div class="container">
+  <div class=" cform d-flex justify-content-center m-5">
+    <div class="form" style="width: 60%">
+      <%= simple_form_for(@flat) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :price_per_night %>
+      <% f.input :number_of_guests %>
+      <div class="d-flex justify-content-around p-2">
+        <%= f.submit %>
+        <%= link_to "Back to Home", root_path  %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

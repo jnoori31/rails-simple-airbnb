@@ -1,20 +1,16 @@
-<!-- #create a card
-#loop through each flat
-#name & location in h1 bold
-#people & price with icons
-# x 4 -->
-
 <div class="container">
+  <div class="cards grid">
   <% @flats.each do |flat|%>
-  <div class="card" style="width: 18rem">
     <div class="card-body">
       <h1 class="card-title"><%= flat.name %></h1>
       <h2 class="card-subtitle mb-2 text-muted"><%= flat.address %></h2>
       <i class="fa fa-gbp" aria-hidden="true"><%= flat.price_per_night %></i>
       <i class="fa fa-users" aria-hidden="true"><%= flat.number_of_guests %></i>
+      <%= link_to "More info", flat_path(flat)  %>
     </div>
-  </div>
   <% end %>
+</div>
+  <%= link_to "Create new", new_flat_path  %>
 </div>
 
 

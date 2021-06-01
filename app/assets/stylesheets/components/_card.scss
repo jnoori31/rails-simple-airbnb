@@ -1,0 +1,28 @@
+.cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  background-color: #f5e6ca;
+}
+
+.showcard{
+  background-color: #f5e6ca;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 30%;
+
+}
+
+
+@media screen and (max-width: 993px ) {
+  .cards{
+    flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  background-color: #f5e6ca;
+  }
+}
