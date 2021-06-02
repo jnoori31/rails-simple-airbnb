@@ -1,15 +1,22 @@
 <div class="container">
   <div class="cards grid">
-  <% @flats.each do |flat|%>
+    <% @flats.each do |flat|%>
     <div class="card-body">
       <h1 class="card-title"><%= flat.name %></h1>
       <h2 class="card-subtitle mb-2 text-muted"><%= flat.address %></h2>
       <i class="fa fa-gbp" aria-hidden="true"><%= flat.price_per_night %></i>
       <i class="fa fa-users" aria-hidden="true"><%= flat.number_of_guests %></i>
       <%= link_to "More info", flat_path(flat)  %>
+      <% if current_user %>
+      <% if flat.user == current_user %>
+      <%= link_to "Edit", edit_flat_path(flat)  %>
+
+      <%= link_to "Delete", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
+      <% end %>
+      <% end %>
     </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
   <%= link_to "Create new", new_flat_path  %>
 </div>
 
