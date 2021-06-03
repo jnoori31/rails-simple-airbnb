@@ -10,6 +10,7 @@ require 'faker'
 puts "Cleaning Databse"
 Flat.destroy_all
 
+user_id = 2
 puts "Creating 4 faker flats"
 4.times do
   flat = Flat.create!(
@@ -17,7 +18,8 @@ puts "Creating 4 faker flats"
     address: Faker::Address.street_address,
     description: Faker::Marketing.buzzwords,
     price_per_night: rand(60..150),
-    number_of_guests: rand(1..5)
+    number_of_guests: rand(1..5),
+    user_id: user_id
   )
 end
 
