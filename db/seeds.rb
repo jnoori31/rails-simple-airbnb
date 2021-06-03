@@ -23,15 +23,3 @@ end
 
 puts "Finished"
 
-# puts "Cleaning database..."
-# Flat.destroy_all
-# 4.times do
-#     flat = Flat.create!(
-#     name: Faker::Restaurant.name,
-#     address: Faker::Address.street_address,
-#     description: Faker::Marketing.buzzwords,
-#     price_per_night: rand(60..150),
-#     number_of_guests: rand(0..5)
-#   )
-# end
-# puts 'Finished!'

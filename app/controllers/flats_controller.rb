@@ -13,7 +13,7 @@ class FlatsController < ApplicationController
 
   def create
     @flat = Flat.new(flat_params)
-    @flat.user = current_user
+    @flat.user.id = current_user.id
     if @flat.save
       redirect_to flats_path
     else

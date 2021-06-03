@@ -8,7 +8,7 @@
       <i class="fa fa-users" aria-hidden="true"><%= flat.number_of_guests %></i>
       <%= link_to "More info", flat_path(flat)  %>
       <% if current_user %>
-      <% if flat.user == current_user %>
+      <% if flat.user.id == current_user.id %>
       <%= link_to "Edit", edit_flat_path(flat)  %>
 
       <%= link_to "Delete", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
